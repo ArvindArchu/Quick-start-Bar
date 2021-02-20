@@ -43,8 +43,27 @@ namespace Quick_start_Bar
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			this.Visible = false;
-			this.Location = new Point(width - 50, height - 850);
+			this.Location = new Point(width - (width - 50), height - (height - 50));
+
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+
+			if(openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				Label label2 = new Label();
+				label2.Text = openfileDlg.FileName;
+			}
 		}
 	}
 }
