@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace Quick_start_Bar
 {
@@ -19,7 +20,8 @@ namespace Quick_start_Bar
 			InitializeComponent();
 			this.StartPosition = FormStartPosition.Manual;
 			this.Location = new Point(width - 284, 0);
-			this.Size = new Size(284, width);				
+			this.Size = new Size(284, width);
+			this.button3.Location = new Point(width - (width - 50), height - (height - 50));
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -43,7 +45,6 @@ namespace Quick_start_Bar
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			this.Location = new Point(width - (width - 50), height - (height - 50));
 
 			OpenFileDialog openfileDlg = new OpenFileDialog
 			{
@@ -58,12 +59,26 @@ namespace Quick_start_Bar
 				RestoreDirectory = true,
 
 			};
-
 			if(openfileDlg.ShowDialog() == DialogResult.OK)
 			{
-				Label label2 = new Label();
 				label2.Text = openfileDlg.FileName;
+				
+				
 			}
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+
+			if (label2.Text != String.Empty && System.IO.File.Exists(label2.Text))
+			{
+				System.Diagnostics.Process.Start(label2.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process hasnt been selected");
+			}
+
 		}
 	}
 }
