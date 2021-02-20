@@ -1,0 +1,9 @@
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\bin\Debug\Quick start Bar.exe.config
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\bin\Debug\Quick start Bar.exe
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\bin\Debug\Quick start Bar.pdb
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.csprojResolveAssemblyReference.cache
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick_start_Bar.Properties.Resources.resources
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.csproj.GenerateResource.Cache
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.exe
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.pdb
+c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick_start_Bar.Start.resources
