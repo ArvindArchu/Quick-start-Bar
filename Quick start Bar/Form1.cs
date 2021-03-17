@@ -13,6 +13,7 @@ namespace Quick_start_Bar
 {
 	public partial class Start : Form
 	{
+		int i = 0;
 		List<string> dirs_List = new List<string>();
 		int height = SystemInformation.VirtualScreen.Height;
 		int width = SystemInformation.VirtualScreen.Width;
@@ -83,6 +84,16 @@ namespace Quick_start_Bar
 				Console.WriteLine("Process has not been selected");
 			}
 
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			Label label = new Label();
+			label.Location = new Point(12, 89 + i);
+			label.Visible = true;
+			label.Text = ("hello");
+			label.Width = 5;
+			label.Height = 5;
 		}
 	}
 }
