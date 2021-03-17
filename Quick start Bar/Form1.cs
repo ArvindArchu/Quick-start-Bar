@@ -13,6 +13,7 @@ namespace Quick_start_Bar
 {
 	public partial class Start : Form
 	{
+		List<string> dirs_List = new List<string>();
 		int height = SystemInformation.VirtualScreen.Height;
 		int width = SystemInformation.VirtualScreen.Width;
 		public Start()
@@ -24,13 +25,14 @@ namespace Quick_start_Bar
 			this.button3.Location = new Point(width - (width - 50), height - (height - 50));
 		}
 
+		//minimise button
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Hide();
-			notifyIcon1.Visible = true;
-			
+			notifyIcon1.Visible = true;	
 		}
 
+		//restore size button
 		private void notifyIcon1_MouseDoubleClick_1(object sender, MouseEventArgs e)
 		{
 			Show();
@@ -38,11 +40,13 @@ namespace Quick_start_Bar
 			notifyIcon1.Visible = false;
 		}
 
+		//exit button
 		private void button2_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
 
+		//changing directory button
 		private void button3_Click(object sender, EventArgs e)
 		{
 
@@ -62,11 +66,11 @@ namespace Quick_start_Bar
 			if(openfileDlg.ShowDialog() == DialogResult.OK)
 			{
 				label2.Text = openfileDlg.FileName;
-				
-				
+				dirs_List.Add(label2.Text);
 			}
 		}
 
+		//launching application button
 		private void button4_Click(object sender, EventArgs e)
 		{
 
@@ -76,7 +80,7 @@ namespace Quick_start_Bar
 			}
 			else
 			{
-				Console.WriteLine("Process hasnt been selected");
+				Console.WriteLine("Process has not been selected");
 			}
 
 		}
