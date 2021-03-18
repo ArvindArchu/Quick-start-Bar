@@ -111,6 +111,7 @@
 			this.label2.Size = new System.Drawing.Size(35, 13);
 			this.label2.TabIndex = 6;
 			this.label2.Text = "label2";
+			this.label2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// button5
 			// 
@@ -118,7 +119,7 @@
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(47, 23);
 			this.button5.TabIndex = 7;
-			this.button5.Text = "button5";
+			this.button5.Text = "New";
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 

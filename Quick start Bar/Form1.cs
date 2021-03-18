@@ -13,7 +13,9 @@ namespace Quick_start_Bar
 {
 	public partial class Start : Form
 	{
-		int i = 0;
+		int labelNum = 5;
+		int cButton = 5;
+		int lButton = 5;
 		List<string> dirs_List = new List<string>();
 		int height = SystemInformation.VirtualScreen.Height;
 		int width = SystemInformation.VirtualScreen.Width;
@@ -88,12 +90,62 @@ namespace Quick_start_Bar
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			Label label = new Label();
-			label.Location = new Point(12, 89 + i);
-			label.Visible = true;
-			label.Text = ("hello");
-			label.Width = 5;
-			label.Height = 5;
+			createNewLabel();
+			createNewConfigureButton();
+			createNewLaunchButton();
 		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		public void createNewLabel()
+		{
+			Label label = new Label();
+			label.Text = ("Hello world");
+			label.Left = 10;
+			label.Top = (labelNum + 1) * 30;
+			this.Controls.Add(label);
+			if (labelNum < 15)
+			{
+				labelNum++;
+			}
+		}
+	
+
+		public void createNewConfigureButton()
+		{
+			Button configureButton = new Button();
+			configureButton.Size = new Size(55, 20);
+			configureButton.Text = ("Change");
+			configureButton.Left = 150;
+			configureButton.Top = (cButton + 1) * 30;
+			this.Controls.Add(configureButton);
+			if (cButton < 15)
+			{
+				cButton++;
+			}
+		}
+
+		void configureButton_Click(object sender, EventArgs )
+
+		public void createNewLaunchButton()
+		{
+			Button launchButton = new Button();
+			launchButton.Size = new Size(55, 20);
+			launchButton.Text = ("Launch");
+			launchButton.Left = 200;
+			launchButton.Top = (lButton + 1) * 30;
+			this.Controls.Add(launchButton);
+			if(lButton < 15)
+			{
+				lButton++;
+			}
+		}
+
+
+
+
 	}
 }
