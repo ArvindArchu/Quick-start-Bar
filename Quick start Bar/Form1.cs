@@ -13,7 +13,6 @@ namespace Quick_start_Bar
 {
 	public partial class Start : Form
 	{
-		int i = 0;
 		List<string> dirs_List = new List<string>();
 		int height = SystemInformation.VirtualScreen.Height;
 		int width = SystemInformation.VirtualScreen.Width;
@@ -50,7 +49,6 @@ namespace Quick_start_Bar
 		//changing directory button
 		private void button3_Click(object sender, EventArgs e)
 		{
-
 			OpenFileDialog openfileDlg = new OpenFileDialog
 			{
 				InitialDirectory = @"C:\",
@@ -64,10 +62,121 @@ namespace Quick_start_Bar
 				RestoreDirectory = true,
 
 			};
-			if(openfileDlg.ShowDialog() == DialogResult.OK)
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
 			{
 				label2.Text = openfileDlg.FileName;
 				dirs_List.Add(label2.Text);
+			}
+
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				label3.Text = openfileDlg.FileName;
+				dirs_List.Add(label3.Text);
+			}
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				label4.Text = openfileDlg.FileName;
+				dirs_List.Add(label4.Text);
+			}
+		}
+
+		private void button10_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				label5.Text = openfileDlg.FileName;
+				dirs_List.Add(label5.Text);
+			}
+		}
+
+		private void button12_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				label6.Text = openfileDlg.FileName;
+				dirs_List.Add(label6.Text);
+			}
+		}
+
+		private void button14_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openfileDlg = new OpenFileDialog
+			{
+				InitialDirectory = @"C:\",
+				Title = "Choose a Application",
+
+				CheckFileExists = true,
+				CheckPathExists = true,
+
+				DefaultExt = "exe",
+				Filter = "executables (*.exe)|*.exe",
+				RestoreDirectory = true,
+
+			};
+			if (openfileDlg.ShowDialog() == DialogResult.OK)
+			{
+				label7.Text = openfileDlg.FileName;
+				dirs_List.Add(label7.Text);
 			}
 		}
 
@@ -88,12 +197,69 @@ namespace Quick_start_Bar
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			Label label = new Label();
-			label.Location = new Point(12, 89 + i);
-			label.Visible = true;
-			label.Text = ("hello");
-			label.Width = 5;
-			label.Height = 5;
+		
 		}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+			if (label3.Text != String.Empty && System.IO.File.Exists(label3.Text))
+			{
+				System.Diagnostics.Process.Start(label3.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process has not been selected");
+			}
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			if (label4.Text != String.Empty && System.IO.File.Exists(label4.Text))
+			{
+				System.Diagnostics.Process.Start(label4.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process has not been selected");
+			}
+		}
+
+		private void button9_Click(object sender, EventArgs e)
+		{
+			if (label5.Text != String.Empty && System.IO.File.Exists(label5.Text))
+			{
+				System.Diagnostics.Process.Start(label5.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process has not been selected");
+			}
+		}
+
+		private void button11_Click(object sender, EventArgs e)
+		{
+			if (label6.Text != String.Empty && System.IO.File.Exists(label6.Text))
+			{
+				System.Diagnostics.Process.Start(label6.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process has not been selected");
+			}
+		}
+
+		private void button13_Click(object sender, EventArgs e)
+		{
+			if (label7.Text != String.Empty && System.IO.File.Exists(label7.Text))
+			{
+				System.Diagnostics.Process.Start(label7.Text);
+			}
+			else
+			{
+				Console.WriteLine("Process has not been selected");
+			}
+		}
+
+
 	}
 }
