@@ -7,3 +7,7 @@ c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick star
 c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.exe
 c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.pdb
 c:\users\family\documents\visual studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick_start_Bar.Start.resources
+C:\Users\family\Documents\Visual Studio 2015\Projects\Quick start Bar\Quick start Bar\bin\Debug\Quick start Bar.exe.manifest
+C:\Users\family\Documents\Visual Studio 2015\Projects\Quick start Bar\Quick start Bar\bin\Debug\Quick start Bar.application
+C:\Users\family\Documents\Visual Studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.exe.manifest
+C:\Users\family\Documents\Visual Studio 2015\Projects\Quick start Bar\Quick start Bar\obj\Debug\Quick start Bar.application
